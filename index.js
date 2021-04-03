@@ -8,8 +8,8 @@ function go() {
   app.get('/', async (req, res) => {
     await util.status('jogar.voltzmc.com.br')
     .then(async (resS) => {
-      res.statusCode = 200
-      res.setHeader('Content-Type', 'application/json')
+      res.setHeader('Content-Type', 'text/html');
+      res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
       res.json(resS);
     })
     .catch((err) => {
