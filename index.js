@@ -8,8 +8,6 @@ function go() {
   app.get('/', async (req, res) => {
     await util.status('jogar.voltzmc.com.br')
     .then(async (resS) => {
-      res.setHeader('Content-Type', 'text/html');
-      res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
       res.json(resS);
     })
     .catch((err) => {
