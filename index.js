@@ -22,6 +22,7 @@ go();
 
 setInterval(go, 10000);
 
-app.listen(8080, () => {
+app.listen(process.env.PORT, () => {
   console.clear();
+  console.log('PORT: ' + process.env.PORT);
 });
