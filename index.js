@@ -1,6 +1,7 @@
 const util = require('minecraft-server-util');
 const app = require('express')();
 const cors = require('cors');
+const port = process.env.PORT || 3001;
 
 app.use(cors());
 
@@ -24,7 +25,7 @@ go();
 
 setInterval(go, 10000);
 
-app.listen(process.env.PORT || 3001, () => {
+app.listen(port, () => {
   console.clear();
-  console.log('PORT: ' + process.env.PORT || 3001);
+  console.log('PORT: ' + port);
 });
