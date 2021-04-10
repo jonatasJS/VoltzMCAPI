@@ -24,7 +24,7 @@ go();
 
 setInterval(go, 10000);
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.clear();
-  console.log('PORT: ' + process.env.PORT);
+  console.log('PORT: ' + process.env.PORT || 3001);
 });
