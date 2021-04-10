@@ -4,14 +4,19 @@ const cors = require('cors');
 
 app.use(cors());
 
-function go() {
-  app.get('/', async (req, res) => {
+async function go() {
+  await app.get('/', async (req, res) => {
     await util.status('jogar.voltzmc.com.br')
     .then(async (resS) => {
       res.json(resS);
     })
     .catch((err) => {
       console.error(err);
+      
+      res.json({
+          msg: 'Error',
+          err
+      });
     });
   });
 }
