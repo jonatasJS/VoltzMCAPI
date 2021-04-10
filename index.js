@@ -24,7 +24,7 @@ go();
 
 setInterval(go, 10000);
 
-app.listen(procces.env.PORT, () => {
+app.listen(process.env.PORT, () => {
   console.clear();
-  console.log('PORT: ' + procces.env.PORT);
+  console.log('PORT: ' + process.env.PORT);
 });
