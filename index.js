@@ -12,7 +12,6 @@ async function go() {
     })
     .catch((err) => {
       console.error(err);
-      
       res.json({
           msg: 'Error',
           err
@@ -25,7 +24,7 @@ go();
 
 setInterval(go, 10000);
 
-app.listen(process.env.PORT, () => {
+app.listen(3000, () => {
   console.clear();
-  console.log('PORT: ' + process.env.PORT);
+  console.log('PORT: ' + 3000);
 });
