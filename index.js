@@ -11,14 +11,17 @@ async function go() {
 
 		await util.status(server)
 			.then(async resS => res.json(resS))
-			.	catch(err => console.log(err));
+			.catch(err => console.log(err));
 	});
 
   await app.get('/', async (req, res) => {
     await util.status('jogar.voltzmc.com.br')
     	.then(async (resS) => res.json(resS))
     	.catch((err) => {
-      	console.error(err);
+      	console.error({
+					msg: 'Error',
+        	err
+      	});
       	res.json({
 					msg: 'Error',
         	err
