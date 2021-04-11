@@ -10,24 +10,20 @@ async function go() {
 		const server = req.params.server;
 
 		await util.status(server)
-		.then(async resS => {
-			res.json(resS)
-		})
-		.catch(err => console.log(err));
+			.then(async resS => res.json(resS))
+			.	catch(err => console.log(err));
 	});
 
   await app.get('/', async (req, res) => {
     await util.status('jogar.voltzmc.com.br')
-    .then(async (resS) => {
-      res.json(resS);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.json({
-          msg: 'Error',
-          err
-      });
-    });
+    	.then(async (resS) => res.json(resS))
+    	.catch((err) => {
+      	console.error(err);
+      	res.json({
+					msg: 'Error',
+        	err
+      	});
+    	});
   });
 }
 
