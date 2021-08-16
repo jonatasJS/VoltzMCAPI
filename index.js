@@ -4,6 +4,7 @@ const cors = require('cors');
 const port = process.env.PORT || 3001;
 
 app.use(cors());
+app.use(express.static('public'));
 
 async function go() {
 	await app.get('/:server', async (req, res) => {
