@@ -17,7 +17,7 @@ async function go() {
 	});
 
   await app.get('/', async (req, res) => {
-    await util.status('jogar.voltzmc.com.br')
+    await util.status('voltzmc.com')
     	.then(async (resS) => res.json(resS))
     	.catch((err) => {
       	console.error({
